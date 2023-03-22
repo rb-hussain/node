@@ -1,0 +1,21 @@
+Node Js is not a language. It's a run time enviroment to run js without browser.
+
+*) Node Modules
+Node modules provide a way to re-use code in your Node application.
+
+Modules Export 
+
+*** File Based Modules ***
+
+module.export ;
+//module.exports = a ;
+
+Import Module
+
+import a from "../index.mjs"
+
+require ("../index.js")
+//const a = require ("../index.js")
+
+*** Build In ***
+
