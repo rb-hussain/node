@@ -11,3 +11,10 @@ if(err){
     console.log(data);
 
 });
+
+const b = "This is demo text";
+
+fs.writeFile("./demo.txt", b ,()=>{
+    console.log("Written")
+});
+console.log("I'm first");
