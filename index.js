@@ -26,7 +26,22 @@ const http = require("http");
 const PORT = 2000;
 const hostname = "localhost";
 const server =  http.createServer((req,res)=>{
-    res.end("working")
+    if(req.url === "/"){
+        res.end("<h1>Home Page</h1>")
+    }
+
+    else if(req.url === "/about"){
+        res.end("<h1>About Page</h1>")
+    }
+
+    else if(req.url === "/contact"){
+        res.end("<h1>Contact Page</h1>")
+    }
+
+    else{
+        res.end("<h1>404 Page</h1>")
+    }
+
 });
 
 server.listen(PORT,hostname, ()=>{
