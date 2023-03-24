@@ -20,14 +20,20 @@
 // console.log("I'm first");
 // console.log("Checking Nodemon");
 
+const fs = require("fs");
+
+
 // Creating a Server 
 const http = require("http");
 
+
 const PORT = 2000;
 const hostname = "localhost";
+const home =  fs.readFileSync("./index.html","utf-8")
+
 const server =  http.createServer((req,res)=>{
     if(req.url === "/"){
-        res.end("<h1>Home Page</h1>")
+        res.end(home)
     }
 
     else if(req.url === "/about"){
